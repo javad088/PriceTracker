@@ -9,4 +9,25 @@ price = soup.select_one(
     'span[data-col="info.last_trade.PDrCotVal"]'
 ).text
 
-print(price)
+
+price = list(price)
+z=0
+for i in price:
+    if i==',':
+        price.pop(z)
+    price=price
+    z+=1
+
+
+pricee = ""    
+for j in price:
+    pricee+=j
+    
+        
+pricee=int(pricee)  
+print("shir")          
+print(pricee//10)
+
+
+
+
